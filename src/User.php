@@ -2,6 +2,9 @@
 
 namespace App;
 
+use Error;
+use ErrorException;
+
 class User {
     private $username;
     private $password;
@@ -10,7 +13,12 @@ class User {
     private $email;
     private $phone;
 
-    public function __construct(string $username, string $password, string $first_name,string $last_name,string $email, int $phone) {
+    public function __construct(string $username = '', string $password = '', string $first_name = '',string $last_name = '',string $email = '', int $phone = 0) {
+
+        if ( $username==''  || $password ==''  || $first_name== '') {
+            throw new ErrorException('Faltan campos obligatorios');
+        }
+
         $this->username = $username;
         $this->password = $password;
         $this->first_name = $first_name;
@@ -20,12 +28,21 @@ class User {
     }
 
     public function setUserName($username){
+        if ( $username=='') {
+            throw new ErrorException('Username es obligatorio');
+        }
         $this->username = $username;
     }
     public function setPassword($password){
+        if ( $password=='') {
+            throw new ErrorException('Password es obligatorio');
+        }
         $this->password = $password;
     }
     public function setFirstName($first_name){
+        if ( $first_name=='') {
+            throw new ErrorException('Nombre es obligatorio');
+        }
         $this->first_name = $first_name;
     }
     public function setLastName($last_name){
