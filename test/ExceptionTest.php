@@ -23,16 +23,6 @@ class ExceptionTest extends TestCase{
 
         $user->setUserName('');
 
-        $this->expectException(ErrorException::class);
-        $this->expectExceptionMessage('Password es obligatorio');
-
-        $user->setPassword('');
-
-        $this->expectException(ErrorException::class);
-        $this->expectExceptionMessage('Nombre es obligatorio');
-
-        $user->setFirstName('');
-
     }
 
     public function test_edit_user_repository(){
