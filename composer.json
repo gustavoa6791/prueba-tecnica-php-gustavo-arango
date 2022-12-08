@@ -1,0 +1,17 @@
+{
+    "name": "gustavoarango/prueba-tecnica-php-gustavo-arango",
+    "require": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gustavoarango\\PruebaTecnicaPhpGustavoArango\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gustavo Arango",
+            "email": "gustavo.arango6791@gmail.com"
+        }
+    ]
+}
