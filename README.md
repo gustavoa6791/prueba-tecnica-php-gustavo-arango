@@ -1,5 +1,5 @@
 # Prueba tecnica
- **Realizada por: **Gustavo Arango 
+ **Realizada por:** Gustavo Arango 
 
 
 ## Instrucciones
